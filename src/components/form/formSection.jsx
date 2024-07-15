@@ -1,8 +1,8 @@
-export default function FormSection({ information }) {
+export function FormSection({ information }) {
 	return (
 		<div>
 			{information.map((element) =>
-				element.label !== "description" ?
+				!element.textArea ?
 					<>
 						<label htmlFor={element.label}>{element.content}</label>
 						<input type={element.input} placeholder={element.content} id={element.label} />
@@ -15,4 +15,13 @@ export default function FormSection({ information }) {
 			)}
 		</div>
 	)
+}
+
+export class FormInfo {
+	constructor(label, input, content, textArea = false) {
+		this.label = label;
+		this.input = input;
+		this.content = content;
+		this.textArea = textArea;
+	}
 }

@@ -1,23 +1,15 @@
-import FormSection from "./formSection";
+import { FormSection, FormInfo } from "./formSection";
 
 export default function Education() {
-	const studyInformation = [{
-		label: "study-title",
-		input: "text",
-		content: "Title of degree"
-	}, {
-		label: "start-date",
-		input: "date",
-		content: "start-date"
-	}, {
-		label: "end-date",
-		input: "date",
-		content: "end-date"
-	}, {
-		label: "description",
-		input: "area-text",
-		content: "Description of the title"
-	}]
+	const studyInformation = [new FormInfo(
+		"study-title", "text", "Title of degree"
+	), new FormInfo(
+		"start-date", "date", "Start date"
+	), new FormInfo(
+		"end-date", "date", "end-date"
+	), new FormInfo(
+		"description", "area-text", "Description of the title", true
+	)];
 
 	return (
 		<>

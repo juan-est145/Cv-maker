@@ -1,37 +1,22 @@
-import FormSection from "./formSection";
+import { FormSection, FormInfo } from "./formSection";
 
 export default function GeneralInfo() {
-	const firstInput = [{
-		label: "first-name",
-		input: "text",
-		content: "First name"
-	}, {
-		label: "last-name",
-		input: "text",
-		content: "Last name"
-	}, {
-		label: "location",
-		input: "text",
-		content: "Location"
-	}]
-
-	const secondInput = [{
-		label: "description",
-		input: "text",
-		content: "Description"
-	}, {
-		label: "telephone",
-		input: "tel",
-		content: "Telephone"
-	}, {
-		label: "email",
-		input: "email",
-		content: "Email"
-	}, {
-		label: "linkedin",
-		input: "url",
-		content: "Linkedin"
-	}]
+	const firstInput = [new FormInfo(
+		"first-name", "text", "First name"
+	), new FormInfo(
+		"last-name", "text", "Last name"
+	), new FormInfo(
+		"location", "text", "Location"
+	)];
+	const secondInput = [new FormInfo(
+		"description", "text", "Description"
+	), new FormInfo(
+		"telephone", "tel", "Telephone"
+	), new FormInfo(
+		"email", "email", "Email"
+	), new FormInfo(
+		"linkedin", "url", "Linkedin"
+	)];
 
 	return (
 		<>
