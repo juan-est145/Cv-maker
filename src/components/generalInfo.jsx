@@ -5,7 +5,8 @@ export default function GeneralInfo() {
 		description: "description",
 		telephone: "telephone",
 		email: "email",
-		linkedin: "linkedin"
+		linkedin: "linkedin",
+		location: "location"
 	};
 
 	return (
@@ -18,6 +19,8 @@ export default function GeneralInfo() {
 				<input type="text" placeholder="First name" id={labels.firstName}/>
 				<label htmlFor={labels.lastName}>Last name</label>
 				<input type="text" placeholder="Last name" id={labels.lastName}/>
+				<label htmlFor={labels.location}>Location</label>
+				<input type="text" placeholder="Location" id={labels.location}/>
 			</div>
 			<div>
 				<label htmlFor={labels.description}>Description</label>
@@ -30,6 +33,8 @@ export default function GeneralInfo() {
 				<input type="url" placeholder="Linkedin" id={labels.email}/>
 			</div>
 			</fieldset>
+			<button>Confirm</button>
+			<button>Reset</button>
 		</form>
 		</>
 	);
