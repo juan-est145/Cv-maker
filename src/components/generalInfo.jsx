@@ -1,41 +1,49 @@
+import FormSection from "./formSection";
+
 export default function GeneralInfo() {
-	const labels = {
-		firstName : "first-name",
-		lastName: "last-name",
-		description: "description",
-		telephone: "telephone",
-		email: "email",
-		linkedin: "linkedin",
-		location: "location"
-	};
+	const firstInput = [{
+		label: "first-name",
+		input: "text",
+		content: "First name"
+	}, {
+		label: "last-name",
+		input: "text",
+		content: "Last name"
+	}, {
+		label: "location",
+		input: "text",
+		content: "Location"
+	}]
+
+	const secondInput = [{
+		label: "description",
+		input: "text",
+		content: "Description"
+	}, {
+		label: "telephone",
+		input: "tel",
+		content: "Telephone"
+	}, {
+		label: "email",
+		input: "email",
+		content: "Email"
+	}, {
+		label: "linkedin",
+		input: "url",
+		content: "Linkedin"
+	}]
 
 	return (
 		<>
-		<h3>General information</h3>
-		<form action="post">
-			<fieldset>
-			<div>
-				<label htmlFor={labels.firstName}>First name</label>
-				<input type="text" placeholder="First name" id={labels.firstName}/>
-				<label htmlFor={labels.lastName}>Last name</label>
-				<input type="text" placeholder="Last name" id={labels.lastName}/>
-				<label htmlFor={labels.location}>Location</label>
-				<input type="text" placeholder="Location" id={labels.location}/>
-			</div>
-			<div>
-				<label htmlFor={labels.description}>Description</label>
-				<input type="text" placeholder="Description" id={labels.description}/>
-				<label htmlFor={labels.telephone}>Telephone</label>
-				<input type="tel" placeholder="Telephone" id={labels.telephone}/>
-				<label htmlFor={labels.email}>Email</label>
-				<input type="email" placeholder="Email" id={labels.email}/>
-				<label htmlFor={labels.email}>Linkedin</label>
-				<input type="url" placeholder="Linkedin" id={labels.email}/>
-			</div>
-			</fieldset>
-			<button>Confirm</button>
-			<button>Reset</button>
-		</form>
+			<h3>General information</h3>
+			<form action="post">
+				<fieldset>
+					<FormSection information={firstInput}></FormSection>
+					<FormSection information={secondInput}></FormSection>
+					<button>Confirm</button>
+					<button>Reset</button>
+				</fieldset>
+			</form>
 		</>
 	);
 }
