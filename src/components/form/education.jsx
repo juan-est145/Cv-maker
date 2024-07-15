@@ -8,7 +8,7 @@ export default function Education() {
 	), new FormInfo(
 		"end-date", "date", "end-date"
 	), new FormInfo(
-		"description", "area-text", "Description of the title", true
+		"description-title", "area-text", "Description of the title", true
 	)];
 
 	return (

@@ -5,6 +5,8 @@ export default function WorkExperience() {
 		"company-name", "text", "Company name"
 	), new FormInfo(
 		"position-title", "text", "Position title"
+	), new FormInfo(
+		"work-desc", "text", "Main responsabilities on job", true
 	)];
 
 
