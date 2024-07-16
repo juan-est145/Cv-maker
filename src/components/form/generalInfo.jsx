@@ -1,6 +1,6 @@
 import { FormSection, FormInfo } from "./formSection";
 
-export default function GeneralInfo({setGenInfo, genInfoState}) {
+export default function GeneralInfo({ setGenInfo, genInfoState }) {
 	const firstInput = [new FormInfo(
 		"firstName", "text", "First name"
 	), new FormInfo(
@@ -19,7 +19,7 @@ export default function GeneralInfo({setGenInfo, genInfoState}) {
 	)];
 
 	function genInfoCallbck(e) {
-		setGenInfo({...genInfoState, [e.target.id] : e.target.value})
+		setGenInfo({ ...genInfoState, [e.target.id]: e.target.value })
 	}
 
 	return (

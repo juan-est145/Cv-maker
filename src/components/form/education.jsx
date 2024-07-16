@@ -1,22 +1,26 @@
 import { FormSection, FormInfo } from "./formSection";
 
-export default function Education() {
+export default function Education({ eduState, setEdu }) {
 	const studyInformation = [new FormInfo(
-		"study-title", "text", "Title of degree"
+		"studyTitle", "text", "Title of degree"
 	), new FormInfo(
-		"start-date", "date", "Start date"
+		"startDate", "date", "Start date"
 	), new FormInfo(
-		"end-date", "date", "end-date"
+		"endDate", "date", "end-date"
 	), new FormInfo(
-		"description-title", "area-text", "Description of the title", true
+		"descriptionTitle", "area-text", "Description of the title", true
 	)];
+
+	function educationCallbck(e) {
+		setEdu({ ...eduState, [e.target.id]: e.target.value })
+	}
 
 	return (
 		<>
 			<h3>Education background</h3>
 			<form action="post"></form>
 			<fieldset>
-				<FormSection information={studyInformation}></FormSection>
+				<FormSection information={studyInformation} callBack={educationCallbck}></FormSection>
 				<button>Confirm</button>
 				<button>Reset</button>
 			</fieldset>

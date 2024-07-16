@@ -4,11 +4,21 @@ import CV from './components/cv'
 
 function App() {
   const [genInfoState, setGenInfo] = useState(new GeneralInfoState());
-  
+  const [eduState, setEdu] = useState(new EducationState())
+
+
   return (
     <>
-      <Form setGenInfo={setGenInfo} genInfoState={genInfoState}></Form>
-      <CV genInfoState={genInfoState}></CV>
+      <Form
+        genInfoState={genInfoState}
+        setGenInfo={setGenInfo}
+        eduState={eduState}
+        setEdu={setEdu}
+      ></Form>
+      <CV
+        genInfoState={genInfoState}
+        eduState={eduState}
+      ></CV>
     </>
   )
 
@@ -31,6 +41,20 @@ class GeneralInfoState {
     this.telephone = telephone;
     this.email = email;
     this.linkedin = linkedin;
+  }
+}
+
+class EducationState {
+  constructor(
+    studyTitle = "",
+    startDate = "",
+    endDate = "",
+    descriptionTitle = ""
+  ) {
+    this.studyTitle = studyTitle;
+    this.startDate = startDate;
+    this.endDate = endDate;
+    this.descriptionTitle = descriptionTitle
   }
 }
 

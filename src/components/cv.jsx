@@ -1,9 +1,17 @@
-export default function CV({genInfoState}) {
+export default function CV({ genInfoState, eduState }) {
 	return (
 		<main>
-			<h1>{genInfoState.firstName}</h1>
-			<h1>{genInfoState.description}</h1>
-			<h3>{genInfoState.linkedin}</h3>
+			<div>
+				<h1>{genInfoState.firstName}</h1>
+				<h1>{genInfoState.description}</h1>
+				<h1>{genInfoState.linkedin}</h1>
+				<h1>{genInfoState.telephone}</h1>
+			</div>
+			<div>
+				<h1>{eduState.studyTitle}</h1>
+				<h1>{eduState.descriptionTitle}</h1>
+				<h1>{eduState.startDate}</h1>
+			</div>
 		</main>
 	)
 }
