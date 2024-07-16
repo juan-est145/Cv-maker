@@ -18,7 +18,7 @@ export default function GeneralInfo({setGenInfo, genInfoState}) {
 		"linkedin", "url", "Linkedin"
 	)];
 
-	function callBack(e) {
+	function genInfoCallbck(e) {
 		setGenInfo({...genInfoState, [e.target.id] : e.target.value})
 	}
 
@@ -27,8 +27,8 @@ export default function GeneralInfo({setGenInfo, genInfoState}) {
 			<h3>General information</h3>
 			<form action="post">
 				<fieldset>
-					<FormSection information={firstInput} callBack={callBack}></FormSection>
-					<FormSection information={secondInput} callBack={setGenInfo}></FormSection>
+					<FormSection information={firstInput} callBack={genInfoCallbck}></FormSection>
+					<FormSection information={secondInput} callBack={genInfoCallbck}></FormSection>
 					<button>Confirm</button>
 					<button>Reset</button>
 				</fieldset>
