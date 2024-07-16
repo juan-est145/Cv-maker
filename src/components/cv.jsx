@@ -1,5 +1,7 @@
-export default function CV() {
+export default function CV({genInfoState}) {
 	return (
-		<main></main>
+		<main>
+			<h1>{genInfoState.firstName}</h1>
+		</main>
 	)
 }

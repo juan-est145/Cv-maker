@@ -1,10 +1,10 @@
 import { FormSection, FormInfo } from "./formSection";
 
-export default function GeneralInfo() {
+export default function GeneralInfo({setGenInfo, genInfoState}) {
 	const firstInput = [new FormInfo(
-		"first-name", "text", "First name"
+		"firstName", "text", "First name"
 	), new FormInfo(
-		"last-name", "text", "Last name"
+		"lastName", "text", "Last name"
 	), new FormInfo(
 		"location", "text", "Location"
 	)];
@@ -18,13 +18,17 @@ export default function GeneralInfo() {
 		"linkedin", "url", "Linkedin"
 	)];
 
+	function callBack(e) {
+		setGenInfo({...genInfoState, [e.target.id] : e.target.value})
+	}
+
 	return (
 		<>
 			<h3>General information</h3>
 			<form action="post">
 				<fieldset>
-					<FormSection information={firstInput}></FormSection>
-					<FormSection information={secondInput}></FormSection>
+					<FormSection information={firstInput} callBack={callBack}></FormSection>
+					<FormSection information={secondInput} callBack={setGenInfo}></FormSection>
 					<button>Confirm</button>
 					<button>Reset</button>
 				</fieldset>

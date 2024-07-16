@@ -2,10 +2,10 @@ import GeneralInfo from "./generalInfo"
 import Education from "./education"
 import WorkExperience from "./workExperience"
 
-export default function Form() {
+export default function Form({setGenInfo, genInfoState}) {
 	return (
 		<aside>
-			<GeneralInfo></GeneralInfo>
+			<GeneralInfo setGenInfo={setGenInfo} genInfoState={genInfoState}></GeneralInfo>
 			<Education></Education>
 			<WorkExperience></WorkExperience>
 		</aside>

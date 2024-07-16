@@ -1,11 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Form from './components/form/form'
-import CV from './components/cv'
+import App from './App'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Form></Form>
-    <CV></CV>
+    <App></App>
   </React.StrictMode>,
 )
