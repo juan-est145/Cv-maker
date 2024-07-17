@@ -5,7 +5,7 @@ import CV from './components/cv'
 function App() {
   const [genInfoState, setGenInfo] = useState(new GeneralInfoState());
   const [eduState, setEdu] = useState(new EducationState())
-
+  const [workState, setWork] = useState(new WorkState())
 
   return (
     <>
@@ -14,10 +14,13 @@ function App() {
         setGenInfo={setGenInfo}
         eduState={eduState}
         setEdu={setEdu}
+        workState={workState}
+        setWork={setWork} 
       ></Form>
       <CV
         genInfoState={genInfoState}
         eduState={eduState}
+        workState={workState}
       ></CV>
     </>
   )
@@ -55,6 +58,18 @@ class EducationState {
     this.startDate = startDate;
     this.endDate = endDate;
     this.descriptionTitle = descriptionTitle
+  }
+}
+
+class WorkState {
+  constructor(
+    companyName = "",
+    positionTitle = "",
+    workDesc = ""
+  ) {
+      this.companyName = companyName;
+      this.positionTitle = positionTitle;
+      this.workDesc = workDesc;
   }
 }
 

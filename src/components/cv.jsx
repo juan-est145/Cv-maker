@@ -1,4 +1,4 @@
-export default function CV({ genInfoState, eduState }) {
+export default function CV({ genInfoState, eduState, workState }) {
 	return (
 		<main>
 			<div>
@@ -11,6 +11,9 @@ export default function CV({ genInfoState, eduState }) {
 				<h1>{eduState.studyTitle}</h1>
 				<h1>{eduState.descriptionTitle}</h1>
 				<h1>{eduState.startDate}</h1>
+			</div>
+			<div>
+				<h1>{workState.companyName}</h1>
 			</div>
 		</main>
 	)

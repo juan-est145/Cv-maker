@@ -6,13 +6,15 @@ export default function Form({
 	genInfoState,
 	setGenInfo,
 	eduState,
-	setEdu
+	setEdu,
+	workState,
+	setWork
 }) {
 	return (
 		<aside>
 			<GeneralInfo setGenInfo={setGenInfo} genInfoState={genInfoState}></GeneralInfo>
 			<Education eduState={eduState} setEdu={setEdu}></Education>
-			<WorkExperience></WorkExperience>
+			<WorkExperience workState={workState} setWork={setWork}></WorkExperience>
 		</aside>
 	)
 }
