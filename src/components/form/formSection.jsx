@@ -4,26 +4,29 @@ export function FormSection({ information, callBack }) {
 	return (
 		<>{information.map((element) =>
 			!element.textArea ?
-				<section key={element.id} className={element.label}>
-					<label htmlFor={element.label}>{element.content}</label>
-					<input
-						type={element.input}
-						placeholder={element.content}
-						id={element.label}
-						onChange={callBack}
-					/>
-				</section>
+				<>
+					<section className={element.label}>
+						<label htmlFor={element.label}>{element.content}</label>
+						<input
+							type={element.input}
+							placeholder={element.content}
+							id={element.label}
+							onChange={callBack}
+						/>
+					</section>
+				</>
 				:
-				<section key={element.id} className={element.label}>
-					<label htmlFor={element.label}>{element.content}</label>
-					<textarea
-						type={element.input}
-						placeholder={element.content}
-						id={element.label}
-						onChange={callBack} />
-				</section>
+				<>
+					<section className={element.label}>
+						<label htmlFor={element.label}>{element.content}</label>
+						<textarea
+							type={element.input}
+							placeholder={element.content}
+							id={element.label}
+							onChange={callBack} />
+					</section>
+				</>
 		)}</>
-
 	)
 }
 
