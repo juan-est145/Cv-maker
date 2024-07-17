@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Form from './components/form/form'
 import CV from './components/cv'
-import "./App.css"
+import "./styles/App.css"
 
 function App() {
   const [genInfoState, setGenInfo] = useState(new GeneralInfoState());
