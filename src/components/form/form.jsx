@@ -70,7 +70,12 @@ function Education({ eduState, setEdu }) {
 	)];
 
 	function educationCallbck(e) {
-		setEdu({ ...eduState, [e.target.id]: e.target.value })
+		if (e.target.type !== "date") {
+			setEdu({ ...eduState, [e.target.id]: e.target.value });
+			return;
+		}
+		let formattedDate = e.target.value.split('-').reverse().join('/');
+		setEdu({...eduState, [e.target.id] : formattedDate})
 	}
 
 	return (
