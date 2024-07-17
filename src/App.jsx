@@ -23,10 +23,8 @@ function App() {
         <CV stateInfo={eduState}></CV>
         <CV stateInfo={workState}></CV>
       </main>
-
     </>
   )
-
 }
 
 class GeneralInfoState {
