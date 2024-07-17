@@ -8,10 +8,3 @@ fieldset > section {
 	display: flex;
 	flex-direction: column;
 }
-
-#startDate {
-	grid-column: -1;
-}
-
-.confirmBtn {
-}
