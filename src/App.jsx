@@ -16,13 +16,14 @@ function App() {
         eduState={eduState}
         setEdu={setEdu}
         workState={workState}
-        setWork={setWork} 
+        setWork={setWork}
       ></Form>
-      <CV
-        genInfoState={genInfoState}
-        eduState={eduState}
-        workState={workState}
-      ></CV>
+      <main>
+        <CV stateInfo={genInfoState}></CV>
+        <CV stateInfo={eduState}></CV>
+        <CV stateInfo={workState}></CV>
+      </main>
+
     </>
   )
 
@@ -68,9 +69,9 @@ class WorkState {
     positionTitle = "",
     workDesc = ""
   ) {
-      this.companyName = companyName;
-      this.positionTitle = positionTitle;
-      this.workDesc = workDesc;
+    this.companyName = companyName;
+    this.positionTitle = positionTitle;
+    this.workDesc = workDesc;
   }
 }
 
