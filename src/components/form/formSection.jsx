@@ -1,6 +1,6 @@
 export function FormSection({ information, callBack }) {
 	return (
-		<div>
+		<section>
 			{information.map((element) =>
 				!element.textArea ?
 					<>
@@ -22,7 +22,7 @@ export function FormSection({ information, callBack }) {
 							onChange={callBack} />
 					</>
 			)}
-		</div>
+		</section>
 	)
 }
 
