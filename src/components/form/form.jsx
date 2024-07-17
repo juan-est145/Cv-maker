@@ -48,8 +48,10 @@ function GeneralInfo({ setGenInfo, genInfoState }) {
 			<form action="post">
 				<fieldset>
 					<FormSection information={firstInput} callBack={genInfoCallbck}></FormSection>
-					<button className={confirmBtnClass}>Confirm</button>
-					<button className={resetBtnClass}>Reset</button>
+					<div>
+						<button className={confirmBtnClass}>Confirm</button>
+						<button className={resetBtnClass}>Reset</button>
+					</div>
 				</fieldset>
 			</form>
 		</>
@@ -77,8 +79,10 @@ function Education({ eduState, setEdu }) {
 			<form action="post">
 				<fieldset>
 					<FormSection information={studyInformation} callBack={educationCallbck}></FormSection>
-					<button className={confirmBtnClass}>Confirm</button>
-					<button className={resetBtnClass}>Reset</button>
+					<div>
+						<button className={confirmBtnClass}>Confirm</button>
+						<button className={resetBtnClass}>Reset</button>
+					</div>
 				</fieldset>
 			</form>
 		</>
@@ -104,8 +108,10 @@ function WorkExperience({ workState, setWork }) {
 			<form action="post">
 				<fieldset>
 					<FormSection information={workInformation} callBack={workCallbck}></FormSection>
-					<button className={confirmBtnClass}>Confirm</button>
-					<button className={resetBtnClass}>Reset</button>
+					<div>
+						<button className={confirmBtnClass}>Confirm</button>
+						<button className={resetBtnClass}>Reset</button>
+					</div>
 				</fieldset>
 			</form>
 		</>
