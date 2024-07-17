@@ -49,8 +49,8 @@ function GeneralInfo({ setGenInfo, genInfoState }) {
 				<fieldset>
 					<FormSection information={firstInput} callBack={genInfoCallbck}></FormSection>
 					<div>
-						<button className={confirmBtnClass}>Confirm</button>
 						<button className={resetBtnClass}>Reset</button>
+						<button className={confirmBtnClass}>Confirm</button>
 					</div>
 				</fieldset>
 			</form>
@@ -75,7 +75,7 @@ function Education({ eduState, setEdu }) {
 			return;
 		}
 		let formattedDate = e.target.value.split('-').reverse().join('/');
-		setEdu({...eduState, [e.target.id] : formattedDate})
+		setEdu({ ...eduState, [e.target.id]: formattedDate })
 	}
 
 	return (
@@ -85,8 +85,8 @@ function Education({ eduState, setEdu }) {
 				<fieldset>
 					<FormSection information={studyInformation} callBack={educationCallbck}></FormSection>
 					<div>
-						<button className={confirmBtnClass}>Confirm</button>
 						<button className={resetBtnClass}>Reset</button>
+						<button className={confirmBtnClass}>Confirm</button>
 					</div>
 				</fieldset>
 			</form>
@@ -114,8 +114,8 @@ function WorkExperience({ workState, setWork }) {
 				<fieldset>
 					<FormSection information={workInformation} callBack={workCallbck}></FormSection>
 					<div>
-						<button className={confirmBtnClass}>Confirm</button>
 						<button className={resetBtnClass}>Reset</button>
+						<button className={confirmBtnClass}>Confirm</button>
 					</div>
 				</fieldset>
 			</form>
