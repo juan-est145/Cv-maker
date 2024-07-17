@@ -42,15 +42,29 @@ function GeneralInfo({ setGenInfo, genInfoState }) {
 		setGenInfo({ ...genInfoState, [e.target.id]: e.target.value })
 	}
 
+	function showBtn(e) {
+		e.preventDefault();
+		setGenInfo({...genInfoState, showInfo: true})
+	}
+
+	function resetBtn(e) {
+		e.preventDefault();
+		setGenInfo({...genInfoState, showInfo: false})
+	}
+
 	return (
 		<>
 			<h3>General information</h3>
 			<form action="post">
 				<fieldset>
-					<FormSection information={firstInput} callBack={genInfoCallbck}></FormSection>
+					<FormSection 
+					information={firstInput} 
+					callBack={genInfoCallbck} 
+					disable={genInfoState.showInfo}
+					></FormSection>
 					<div>
-						<button className={resetBtnClass}>Reset</button>
-						<button className={confirmBtnClass}>Confirm</button>
+						<button className={resetBtnClass} onClick={resetBtn}>Reset</button>
+						<button className={confirmBtnClass} onClick={showBtn}>Confirm</button>
 					</div>
 				</fieldset>
 			</form>
@@ -78,15 +92,29 @@ function Education({ eduState, setEdu }) {
 		setEdu({ ...eduState, [e.target.id]: formattedDate })
 	}
 
+	function showBtn(e) {
+		e.preventDefault();
+		setEdu({...eduState, showInfo: true})
+	}
+
+	function resetBtn(e) {
+		e.preventDefault();
+		setEdu({...eduState, showInfo: false})
+	}
+
 	return (
 		<>
 			<h3>Education background</h3>
 			<form action="post">
 				<fieldset>
-					<FormSection information={studyInformation} callBack={educationCallbck}></FormSection>
+					<FormSection 
+					information={studyInformation} 
+					callBack={educationCallbck}
+					disable={eduState.showInfo}
+					></FormSection>
 					<div>
-						<button className={resetBtnClass}>Reset</button>
-						<button className={confirmBtnClass}>Confirm</button>
+						<button className={resetBtnClass} onClick={resetBtn}>Reset</button>
+						<button className={confirmBtnClass} onClick={showBtn}>Confirm</button>
 					</div>
 				</fieldset>
 			</form>
@@ -107,15 +135,29 @@ function WorkExperience({ workState, setWork }) {
 		setWork({ ...workState, [e.target.id]: e.target.value })
 	}
 
+	function showBtn(e) {
+		e.preventDefault();
+		setWork({...workState, showInfo: true})
+	}
+
+	function resetBtn(e) {
+		e.preventDefault();
+		setWork({...workState, showInfo: false})
+	}
+
 	return (
 		<>
 			<h3>Work experience</h3>
 			<form action="post">
 				<fieldset>
-					<FormSection information={workInformation} callBack={workCallbck}></FormSection>
+					<FormSection 
+					information={workInformation} 
+					callBack={workCallbck}
+					disable={workState.showInfo}
+					></FormSection>
 					<div>
-						<button className={resetBtnClass}>Reset</button>
-						<button className={confirmBtnClass}>Confirm</button>
+						<button className={resetBtnClass} onClick={resetBtn}>Reset</button>
+						<button className={confirmBtnClass} onClick={showBtn}>Confirm</button>
 					</div>
 				</fieldset>
 			</form>

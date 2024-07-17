@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-export function FormSection({ information, callBack }) {
+export function FormSection({ information, callBack, disable }) {
 	return (
 		<>{information.map((element) =>
 			!element.textArea ?
@@ -12,6 +12,7 @@ export function FormSection({ information, callBack }) {
 							placeholder={element.content}
 							id={element.label}
 							onChange={callBack}
+							disabled={disable}
 						/>
 					</section>
 				</>
@@ -23,7 +24,9 @@ export function FormSection({ information, callBack }) {
 							type={element.input}
 							placeholder={element.content}
 							id={element.label}
-							onChange={callBack} />
+							onChange={callBack}
+							disabled={disable}
+						/>
 					</section>
 				</>
 		)}</>

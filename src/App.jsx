@@ -46,6 +46,7 @@ class GeneralInfoState {
     this.telephone = telephone;
     this.email = email;
     this.linkedin = linkedin;
+    this.showInfo = false;
   }
 }
 
@@ -60,6 +61,7 @@ class EducationState {
     this.startDate = startDate;
     this.endDate = endDate;
     this.descriptionTitle = descriptionTitle
+    this.showInfo = false;
   }
 }
 
@@ -72,6 +74,7 @@ class WorkState {
     this.companyName = companyName;
     this.positionTitle = positionTitle;
     this.workDesc = workDesc;
+    this.showInfo = false;
   }
 }
 
