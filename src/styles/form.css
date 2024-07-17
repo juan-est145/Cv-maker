@@ -1,10 +1,17 @@
 fieldset {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 2vw;
+	grid-auto-flow: row;
 }
 
 fieldset > section {
 	display: flex;
 	flex-direction: column;
+}
+
+#startDate {
+	grid-column: -1;
+}
+
+.confirmBtn {
 }

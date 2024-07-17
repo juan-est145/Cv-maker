@@ -1,6 +1,9 @@
 import { FormSection, FormInfo } from "./formSection";
 import "../../styles/form.css"
 
+let confirmBtnClass = "confirmBtn";
+let resetBtnClass = "resetBtn";
+
 export default function Form({
 	genInfoState,
 	setGenInfo,
@@ -25,8 +28,7 @@ function GeneralInfo({ setGenInfo, genInfoState }) {
 		"lastName", "text", "Last name"
 	), new FormInfo(
 		"location", "text", "Location"
-	)];
-	const secondInput = [new FormInfo(
+	), new FormInfo(
 		"description", "text", "Description"
 	), new FormInfo(
 		"telephone", "tel", "Telephone"
@@ -46,9 +48,8 @@ function GeneralInfo({ setGenInfo, genInfoState }) {
 			<form action="post">
 				<fieldset>
 					<FormSection information={firstInput} callBack={genInfoCallbck}></FormSection>
-					<FormSection information={secondInput} callBack={genInfoCallbck}></FormSection>
-					<button>Confirm</button>
-					<button>Reset</button>
+					<button className={confirmBtnClass}>Confirm</button>
+					<button className={resetBtnClass}>Reset</button>
 				</fieldset>
 			</form>
 		</>
@@ -73,17 +74,18 @@ function Education({ eduState, setEdu }) {
 	return (
 		<>
 			<h3>Education background</h3>
-			<form action="post"></form>
-			<fieldset>
-				<FormSection information={studyInformation} callBack={educationCallbck}></FormSection>
-				<button>Confirm</button>
-				<button>Reset</button>
-			</fieldset>
+			<form action="post">
+				<fieldset>
+					<FormSection information={studyInformation} callBack={educationCallbck}></FormSection>
+					<button className={confirmBtnClass}>Confirm</button>
+					<button className={resetBtnClass}>Reset</button>
+				</fieldset>
+			</form>
 		</>
 	)
 }
 
-function WorkExperience({workState, setWork}) {
+function WorkExperience({ workState, setWork }) {
 	const workInformation = [new FormInfo(
 		"companyName", "text", "Company name"
 	), new FormInfo(
@@ -93,18 +95,19 @@ function WorkExperience({workState, setWork}) {
 	)];
 
 	function workCallbck(e) {
-		setWork({...workState, [e.target.id]: e.target.value})
+		setWork({ ...workState, [e.target.id]: e.target.value })
 	}
 
 	return (
 		<>
 			<h3>Work experience</h3>
-			<form action="post"></form>
-			<fieldset>
-				<FormSection information={workInformation} callBack={workCallbck}></FormSection>
-				<button>Confirm</button>
-				<button>Reset</button>
-			</fieldset>
+			<form action="post">
+				<fieldset>
+					<FormSection information={workInformation} callBack={workCallbck}></FormSection>
+					<button className={confirmBtnClass}>Confirm</button>
+					<button className={resetBtnClass}>Reset</button>
+				</fieldset>
+			</form>
 		</>
 	)
 }

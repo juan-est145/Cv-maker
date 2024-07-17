@@ -1,28 +1,29 @@
+import { v4 as uuidv4 } from 'uuid';
+
 export function FormSection({ information, callBack }) {
 	return (
-		<section>
-			{information.map((element) =>
-				!element.textArea ?
-					<>
-						<label htmlFor={element.label}>{element.content}</label>
-						<input
-							type={element.input}
-							placeholder={element.content}
-							id={element.label}
-							onChange={callBack}
-						/>
-					</>
-					:
-					<>
-						<label htmlFor={element.label}>{element.content}</label>
-						<textarea
-							type={element.input}
-							placeholder={element.content}
-							id={element.label}
-							onChange={callBack} />
-					</>
-			)}
-		</section>
+		<>{information.map((element) =>
+			!element.textArea ?
+				<section key={element.id} className={element.label}>
+					<label htmlFor={element.label}>{element.content}</label>
+					<input
+						type={element.input}
+						placeholder={element.content}
+						id={element.label}
+						onChange={callBack}
+					/>
+				</section>
+				:
+				<section key={element.id} className={element.label}>
+					<label htmlFor={element.label}>{element.content}</label>
+					<textarea
+						type={element.input}
+						placeholder={element.content}
+						id={element.label}
+						onChange={callBack} />
+				</section>
+		)}</>
+
 	)
 }
 
@@ -32,5 +33,6 @@ export class FormInfo {
 		this.input = input;
 		this.content = content;
 		this.textArea = textArea;
+		this.id = uuidv4();
 	}
 }
