@@ -1,4 +1,5 @@
 import { FormSection, FormInfo } from "./formSection";
+import "../../styles/form.css"
 
 export default function Form({
 	genInfoState,
