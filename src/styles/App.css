@@ -20,18 +20,22 @@ body {
 	min-height: 100vh;
 	display: flex;
 	gap: 10px;
+	justify-content: space-evenly;
 }
 
 aside {
-	flex: 2;
 	padding: 1.2em;
 }
 
 main {
-	flex: 3;
 	background-color: #fff;
 	--general-padding: 1.05em;
 	--cv-header-color: #0e374e;
+}
+
+.CV {
+	max-width: 210mm;
+	max-height: 297mm;
 }
 
 form {

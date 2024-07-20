@@ -19,11 +19,13 @@ function App() {
         setWork={setWork}
       ></Form>
       <main>
-        <CV
-          genInfoState={genInfoState}
-          eduState={eduState}
-          workState={workState}
-        ></CV>
+        <div className="CV">
+          <CV
+            genInfoState={genInfoState}
+            eduState={eduState}
+            workState={workState}
+          ></CV>
+        </div>
       </main>
     </>
   )
