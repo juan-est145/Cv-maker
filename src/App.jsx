@@ -71,10 +71,14 @@ class WorkState {
   constructor(
     companyName = "",
     positionTitle = "",
+    startDate = "",
+    endDate = "",
     workDesc = ""
   ) {
     this.companyName = companyName;
     this.positionTitle = positionTitle;
+    this.startDate = startDate;
+    this.endDate = endDate;
     this.workDesc = workDesc;
     this.showInfo = false;
   }

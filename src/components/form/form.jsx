@@ -128,6 +128,10 @@ function WorkExperience({ workState, setWork }) {
 	), new FormInfo(
 		"positionTitle", "text", "Position title"
 	), new FormInfo(
+		"workStartDate", "date", "Start date"
+	), new FormInfo(
+		"workEndDate", "date", "End date"
+	), new FormInfo(
 		"workDesc", "text", "Main responsabilities on job", true
 	)];
 
