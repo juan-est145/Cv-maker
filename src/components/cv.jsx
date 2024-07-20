@@ -1,3 +1,5 @@
+import "../styles/cv.css"
+
 export default function CV({ genInfoState, eduState, workState }) {
 	return (
 		<GeneralInfoCV genInfoState={genInfoState}></GeneralInfoCV>
@@ -8,7 +10,7 @@ function GeneralInfoCV({ genInfoState }) {
 	if (!genInfoState.showInfo)
 		return (null);
 	return (
-		<section>
+		<section className="genInfo">
 			<h1>{`${genInfoState.firstName} ${genInfoState.lastName}`}</h1>
 			<div>
 				<span>{genInfoState.email}</span>

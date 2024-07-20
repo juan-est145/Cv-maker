@@ -1,0 +1,8 @@
+.genInfo {
+	--cv-header-color: #0e374e;
+	--gen-info-color: #fff;
+	background-color: var(--cv-header-color);
+	color: var(--gen-info-color);
+	width: 100%;
+}
+

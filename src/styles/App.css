@@ -1,5 +1,13 @@
+@font-face {
+    font-family: 'Noto Sans';
+    src: url("../../fonts/noto-sans/NotoSans-Regular.ttf") format('truetype');
+}
+
 body {
+	--main-bg-color: #f3f4f6;
 	margin: 0px;
+	background-color: var(--main-bg-color);
+	font-family: "Noto Sans", sans-serif;
 }
 
 #root {
@@ -10,10 +18,14 @@ body {
 
 aside {
 	flex: 2;
-	background-color: beige;
 	padding: 1.2em;
 }
 
 main {
 	flex: 3;
+	background-color: #fff;
+}
+
+form {
+	background-color: #fff;
 }
