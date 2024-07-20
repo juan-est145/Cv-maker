@@ -70,7 +70,7 @@ function EducationInfoCV({ eduState }) {
 			<div className="eduData">
 				<div className="degreeDateAndTitle">
 					<p>- {eduState.studyTitle}</p>
-					<p>{eduState.startDate} {eduState.startDate? '-' : null} {endDate}</p>
+					<p>{eduState.startDate} {eduState.startDate ? '-' : null} {endDate}</p>
 				</div>
 				<p>{eduState.descriptionTitle}</p>
 			</div>
@@ -79,8 +79,13 @@ function EducationInfoCV({ eduState }) {
 }
 
 function WorkExpInfoCV({ workState }) {
-	workState;
-	return (null);
+	if (!workState.showInfo)
+		return (null);
+	return (
+		<section className="workState">
+
+		</section>
+	);
 }
 
 
