@@ -64,6 +64,7 @@
 	justify-content: space-around;
 	align-items: flex-start;
 	text-align: justify;
+	gap: 10px;
 }
 
 .eduData>p {
@@ -79,4 +80,5 @@
 .degreeDateAndTitle>p:first-child {
 	font-size: 1rem;
 	font-weight: bold;
+	min-width: 25ch;
 }
