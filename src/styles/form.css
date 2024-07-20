@@ -21,3 +21,26 @@ fieldset>section>textarea {
 	min-height: 100px;
 	grid-column: 1/-1;
 }
+
+.confirmBtn,
+.resetBtn {
+	border: none;
+	cursor: pointer;
+	padding: 0.5em;
+	font-size: 1.05rem;
+}
+
+.confirmBtn {
+	background-color: var(--cv-header-color);
+	color: white;
+	--confirm-active-color: #061e2c;
+	--reset-active-color: #b6b6b6;
+}
+
+.resetBtn:active {
+	background-color: var(--reset-active-color);
+}
+
+.confirmBtn:active {
+	background-color: var(--confirm-active-color);
+}
