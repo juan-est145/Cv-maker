@@ -29,13 +29,13 @@ function GeneralInfo({ setGenInfo, genInfoState }) {
 	), new FormInfo(
 		"location", "text", "Location"
 	), new FormInfo(
-		"description", "text", "Description"
-	), new FormInfo(
 		"telephone", "tel", "Telephone"
 	), new FormInfo(
 		"email", "email", "Email"
 	), new FormInfo(
 		"linkedin", "url", "Linkedin (username)"
+	), new FormInfo(
+		"description", "text", "Description", true
 	)];
 
 	function genInfoCallbck(e) {
