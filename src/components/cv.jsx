@@ -27,10 +27,12 @@ function GeneralInfoCV({ genInfoState }) {
 						<span>{genInfoState.email}</span>
 					</div>
 				)}
-				<div>
-					{phoneSvg}
-					<span>{genInfoState.telephone}</span>
-				</div>
+				{genInfoState.telephone && (
+					<div>
+						{phoneSvg}
+						<span>{genInfoState.telephone}</span>
+					</div>
+				)}
 				<div>
 					<span>{genInfoState.location}</span>
 				</div>
