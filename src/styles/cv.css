@@ -1,9 +1,8 @@
 .genInfo {
-	--cv-header-color: #0e374e;
 	--gen-info-color: #fff;
 	background-color: var(--cv-header-color);
 	color: var(--gen-info-color);
-	padding: 1.05em;
+	padding: var(--general-padding);
 }
 
 .genInfo > h1 {
@@ -12,10 +11,14 @@
 	margin: 0px;
 }
 
-.genInfo > h3 {
-	margin: 0px;
+.genInfo > h3, .genInfo > div h3 {
+	margin: 2px;
 	text-decoration: underline;
 	font-size: 1.4rem;
+}
+
+.genInfo p {
+	margin: 3px;
 }
 
 .contactInfo {
@@ -39,4 +42,17 @@
 .contactInfo a {
 	text-decoration: none;
 	color: var(--gen-info-color);
+}
+
+.eduState {
+	padding: var(--general-padding);
+	--title-background-color: rgba(14,55,78,.07);
+	text-align: center;
+	color: var(--cv-header-color);
+}
+
+.eduState > h3 {
+	text-decoration: underline;
+	font-size: 1.5rem;
+	background-color: var(--title-background-color);
 }

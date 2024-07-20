@@ -24,6 +24,8 @@ aside {
 main {
 	flex: 3;
 	background-color: #fff;
+	--general-padding: 1.05em;
+	--cv-header-color: #0e374e;
 }
 
 form {

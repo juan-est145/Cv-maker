@@ -57,8 +57,13 @@ function GeneralInfoCV({ genInfoState }) {
 }
 
 function EducationInfoCV({ eduState }) {
-	eduState;
-	return (null);
+	if (!eduState.showInfo)
+		return (null);
+	return (
+		<section className="eduState">
+			<h3>Education</h3>
+		</section>
+	)
 }
 
 function WorkExpInfoCV({ workState }) {
