@@ -45,20 +45,20 @@
 	color: var(--gen-info-color);
 }
 
-.eduState {
+.cvSection {
 	padding: var(--general-padding);
 	--title-background-color: rgba(14, 55, 78, .07);
 	text-align: center;
 	color: var(--cv-header-color);
 }
 
-.eduState>h3 {
+.cvSection>h3 {
 	text-decoration: underline;
 	font-size: 1.5rem;
 	background-color: var(--title-background-color);
 }
 
-.eduData {
+.cvData {
 	color: black;
 	display: flex;
 	justify-content: space-around;
@@ -67,18 +67,18 @@
 	gap: 20px;
 }
 
-.eduData>p {
+.cvData>p {
 	max-width: 50ch;
 	margin: 0;
 }
 
-.degreeDateAndTitle>p {
+.dateAndTitle>p {
 	font-size: 0.9rem;
 	margin: 0.5px;
 }
 
 
-.degreeDateAndTitle>p:first-child {
+.dateAndTitle>p:first-child {
 	font-size: 1rem;
 	font-weight: bold;
 	min-width: 25ch;

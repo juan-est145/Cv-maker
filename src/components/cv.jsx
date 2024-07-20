@@ -65,25 +65,37 @@ function EducationInfoCV({ eduState }) {
 		endDate = "Current day";
 
 	return (
-		<section className="eduState">
+		<section className="cvSection">
 			<h3>Education</h3>
-			<div className="eduData">
-				<div className="degreeDateAndTitle">
+			<div className="cvData">
+				<div className="dateAndTitle">
 					<p>- {eduState.studyTitle}</p>
 					<p>{eduState.startDate} {eduState.startDate ? '-' : null} {endDate}</p>
 				</div>
 				<p>{eduState.descriptionTitle}</p>
 			</div>
 		</section>
-	)
+	);
 }
 
 function WorkExpInfoCV({ workState }) {
 	if (!workState.showInfo)
 		return (null);
-	return (
-		<section className="workState">
+	//Remember to later change this function to an array or something for each element in eduState (future array of objects)
+	let endDate = workState.workEndDate;
+	if (workState.workStartDate && !workState.workEndDate)
+		endDate = "Current day";
 
+	return (
+		<section className="cvSection">
+			<h3>Work experience</h3>
+			<div className="cvData">
+				<div className="dateAndTitle">
+					<p>- {workState.positionTitle} ({workState.companyName})</p>
+					<p>{workState.workStartDate} {workState.workStartDate ? '-' : null} {endDate}</p>
+				</div>
+				<p>{workState.workDesc}</p>
+			</div>
 		</section>
 	);
 }

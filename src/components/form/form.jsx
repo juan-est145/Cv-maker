@@ -89,17 +89,17 @@ function Education({ eduState, setEdu }) {
 			return;
 		}
 		let formattedDate = e.target.value.split('-').reverse().join('/');
-		setEdu({ ...eduState, [e.target.id]: formattedDate })
+		setEdu({ ...eduState, [e.target.id]: formattedDate });
 	}
 
 	function showBtn(e) {
 		e.preventDefault();
-		setEdu({ ...eduState, showInfo: true })
+		setEdu({ ...eduState, showInfo: true });
 	}
 
 	function resetBtn(e) {
 		e.preventDefault();
-		setEdu({ ...eduState, showInfo: false })
+		setEdu({ ...eduState, showInfo: false });
 	}
 
 	return (
@@ -136,7 +136,12 @@ function WorkExperience({ workState, setWork }) {
 	)];
 
 	function workCallbck(e) {
-		setWork({ ...workState, [e.target.id]: e.target.value })
+		if (e.target.type !== "date") {
+			setWork({ ...workState, [e.target.id]: e.target.value });
+			return;
+		}
+		let formattedDate = e.target.value.split('-').reverse().join('/');
+		setWork({ ...workState, [e.target.id]: formattedDate });
 	}
 
 	function showBtn(e) {
