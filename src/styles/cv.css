@@ -3,7 +3,6 @@
 	--gen-info-color: #fff;
 	background-color: var(--cv-header-color);
 	color: var(--gen-info-color);
-	width: 100%;
 	padding: 1.05em;
 }
 
