@@ -2,7 +2,11 @@ import "../styles/cv.css"
 
 export default function CV({ genInfoState, eduState, workState }) {
 	return (
-		<GeneralInfoCV genInfoState={genInfoState}></GeneralInfoCV>
+		<>
+			<GeneralInfoCV genInfoState={genInfoState}></GeneralInfoCV>
+			<EducationInfoCV eduState={eduState}></EducationInfoCV>
+			<WorkExpInfoCV workState={workState}></WorkExpInfoCV>
+		</>
 	)
 }
 
@@ -40,6 +44,16 @@ function GeneralInfoCV({ genInfoState }) {
 			</div>
 		</section>
 	)
+}
+
+function EducationInfoCV({ eduState }) {
+	eduState;
+	return (null);
+}
+
+function WorkExpInfoCV({ workState }) {
+	workState;
+	return (null);
 }
 
 
