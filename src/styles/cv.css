@@ -35,3 +35,8 @@
 .contactInfo svg {
 	width: 1em;
 }
+
+.contactInfo a {
+	text-decoration: none;
+	color: var(--gen-info-color);
+}

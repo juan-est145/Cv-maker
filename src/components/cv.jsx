@@ -44,7 +44,7 @@ function GeneralInfoCV({ genInfoState }) {
 				{genInfoState.linkedin && (
 					<div>
 						{lnSvg}
-						<span>{genInfoState.linkedin}</span>
+						<a href={`https://www.linkedin.com/in/${genInfoState.linkedin}`}>{genInfoState.linkedin}</a>
 					</div>
 				)}
 			</div>

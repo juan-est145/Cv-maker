@@ -35,7 +35,7 @@ function GeneralInfo({ setGenInfo, genInfoState }) {
 	), new FormInfo(
 		"email", "email", "Email"
 	), new FormInfo(
-		"linkedin", "url", "Linkedin"
+		"linkedin", "url", "Linkedin (username)"
 	)];
 
 	function genInfoCallbck(e) {
@@ -44,12 +44,12 @@ function GeneralInfo({ setGenInfo, genInfoState }) {
 
 	function showBtn(e) {
 		e.preventDefault();
-		setGenInfo({...genInfoState, showInfo: true})
+		setGenInfo({ ...genInfoState, showInfo: true })
 	}
 
 	function resetBtn(e) {
 		e.preventDefault();
-		setGenInfo({...genInfoState, showInfo: false})
+		setGenInfo({ ...genInfoState, showInfo: false })
 	}
 
 	return (
@@ -57,10 +57,10 @@ function GeneralInfo({ setGenInfo, genInfoState }) {
 			<h3>General information</h3>
 			<form action="post">
 				<fieldset>
-					<FormSection 
-					information={firstInput} 
-					callBack={genInfoCallbck} 
-					disable={genInfoState.showInfo}
+					<FormSection
+						information={firstInput}
+						callBack={genInfoCallbck}
+						disable={genInfoState.showInfo}
 					></FormSection>
 					<div>
 						<button className={resetBtnClass} onClick={resetBtn}>Reset</button>
@@ -94,12 +94,12 @@ function Education({ eduState, setEdu }) {
 
 	function showBtn(e) {
 		e.preventDefault();
-		setEdu({...eduState, showInfo: true})
+		setEdu({ ...eduState, showInfo: true })
 	}
 
 	function resetBtn(e) {
 		e.preventDefault();
-		setEdu({...eduState, showInfo: false})
+		setEdu({ ...eduState, showInfo: false })
 	}
 
 	return (
@@ -107,10 +107,10 @@ function Education({ eduState, setEdu }) {
 			<h3>Education background</h3>
 			<form action="post">
 				<fieldset>
-					<FormSection 
-					information={studyInformation} 
-					callBack={educationCallbck}
-					disable={eduState.showInfo}
+					<FormSection
+						information={studyInformation}
+						callBack={educationCallbck}
+						disable={eduState.showInfo}
 					></FormSection>
 					<div>
 						<button className={resetBtnClass} onClick={resetBtn}>Reset</button>
@@ -137,12 +137,12 @@ function WorkExperience({ workState, setWork }) {
 
 	function showBtn(e) {
 		e.preventDefault();
-		setWork({...workState, showInfo: true})
+		setWork({ ...workState, showInfo: true })
 	}
 
 	function resetBtn(e) {
 		e.preventDefault();
-		setWork({...workState, showInfo: false})
+		setWork({ ...workState, showInfo: false })
 	}
 
 	return (
@@ -150,10 +150,10 @@ function WorkExperience({ workState, setWork }) {
 			<h3>Work experience</h3>
 			<form action="post">
 				<fieldset>
-					<FormSection 
-					information={workInformation} 
-					callBack={workCallbck}
-					disable={workState.showInfo}
+					<FormSection
+						information={workInformation}
+						callBack={workCallbck}
+						disable={workState.showInfo}
 					></FormSection>
 					<div>
 						<button className={resetBtnClass} onClick={resetBtn}>Reset</button>
