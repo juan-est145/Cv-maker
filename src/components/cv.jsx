@@ -59,9 +59,21 @@ function GeneralInfoCV({ genInfoState }) {
 function EducationInfoCV({ eduState }) {
 	if (!eduState.showInfo)
 		return (null);
+	//Rember to later change this function to an array or something for each element in eduState (future array of objects)
+	let endDate = eduState.endDate;
+	if (eduState.startDate && !eduState.endDate)
+		endDate = "Current day";
+
 	return (
 		<section className="eduState">
 			<h3>Education</h3>
+			<div className="eduData">
+				<div className="degreeDateAndTitle">
+					<p>{eduState.studyTitle}</p>
+					<p>{eduState.startDate} {eduState.startDate? '-' : null} {endDate}</p>
+				</div>
+				<p>{eduState.descriptionTitle}</p>
+			</div>
 		</section>
 	)
 }
