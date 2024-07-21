@@ -11,7 +11,6 @@
 
 body {
 	--main-bg-color: #f3f4f6;
-	--cv-header-color: #0e374e;
 	margin: 0px;
 	background-color: var(--main-bg-color);
 	font-family: "Noto Sans", sans-serif;
@@ -31,6 +30,7 @@ aside {
 main {
 	background-color: #fff;
 	--general-padding: 1.05em;
+	--cv-header-color: #0e374e;
 }
 
 .CV {
