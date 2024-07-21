@@ -5,7 +5,7 @@ import "./styles/App.css"
 
 function App() {
   const [genInfoState, setGenInfo] = useState(new GeneralInfoState());
-  const [eduState, setEdu] = useState([new EducationState()])
+  const [eduState, setEdu] = useState(new EducationState())
   const [workState, setWork] = useState(new WorkState())
 
   return (

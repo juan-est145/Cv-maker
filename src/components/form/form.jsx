@@ -3,7 +3,6 @@ import "../../styles/form.css"
 
 let confirmBtnClass = "confirmBtn";
 let resetBtnClass = "resetBtn";
-let addSectionBtn = "addBtn";
 
 export default function Form({
 	genInfoState,
@@ -117,7 +116,6 @@ function Education({ eduState, setEdu }) {
 						<button className={resetBtnClass} onClick={resetBtn}>Reset</button>
 						<button className={confirmBtnClass} onClick={showBtn}>Confirm</button>
 					</div>
-					<button className={addSectionBtn} >Add new education</button>
 				</fieldset>
 			</form>
 		</>
