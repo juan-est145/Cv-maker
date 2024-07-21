@@ -52,7 +52,7 @@ class GeneralInfoState {
   }
 }
 
-export class EducationState {
+class EducationState {
   constructor(
     studyTitle = "",
     startDate = "",

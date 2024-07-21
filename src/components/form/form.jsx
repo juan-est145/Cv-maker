@@ -1,8 +1,5 @@
 import { FormSection, FormInfo } from "./formSection";
 import "../../styles/form.css"
-import { EducationState } from "../../App";
-import { v4 as uuidv4 } from 'uuid';
-import { useState } from "react";
 
 let confirmBtnClass = "confirmBtn";
 let resetBtnClass = "resetBtn";
@@ -77,7 +74,7 @@ function GeneralInfo({ setGenInfo, genInfoState }) {
 }
 
 function Education({ eduState, setEdu }) {
-	const [studyInfoState, setStudyInfo] = useState([new FormInfo(
+	const studyInformation = [new FormInfo(
 		"studyTitle", "text", "Title of degree"
 	), new FormInfo(
 		"startDate", "date", "Start date"
@@ -85,7 +82,7 @@ function Education({ eduState, setEdu }) {
 		"endDate", "date", "end-date"
 	), new FormInfo(
 		"descriptionTitle", "area-text", "Description of the title", true
-	)]);
+	)];
 
 	function educationCallbck(e) {
 		if (e.target.type !== "date") {
@@ -106,23 +103,13 @@ function Education({ eduState, setEdu }) {
 		setEdu({ ...eduState, showInfo: false });
 	}
 
-	function eduBtn(e) {
-		e.preventDefault();
-		setStudyInfo([...studyInfoState, 
-			new FormInfo(`studyTitle-${uuidv4()}`, "text", "Title of degree"),
-			new FormInfo(`startDate-${uuidv4()}`, "date", "Start date"),
-			new FormInfo(`endDate-${uuidv4()}`, "date", "end-date"), 
-			new FormInfo(`descriptionTitle-${uuidv4()}`, "area-text", "Description of the title", true)]);
-		setEdu([...eduState, new EducationState()]);
-	}
-
 	return (
 		<>
 			<h3>Education background</h3>
 			<form action="post">
 				<fieldset>
 					<FormSection
-						information={studyInfoState}
+						information={studyInformation}
 						callBack={educationCallbck}
 						disable={eduState.showInfo}
 					></FormSection>
@@ -130,7 +117,7 @@ function Education({ eduState, setEdu }) {
 						<button className={resetBtnClass} onClick={resetBtn}>Reset</button>
 						<button className={confirmBtnClass} onClick={showBtn}>Confirm</button>
 					</div>
-					<button className={addSectionBtn} onClick={eduBtn}>Add new education</button>
+					<button className={addSectionBtn} >Add new education</button>
 				</fieldset>
 			</form>
 		</>
